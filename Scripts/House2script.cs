@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class SceneChanger : MonoBehaviour
+public class House2script : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Player"){
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("TheEnd");
         }
     }
-    
 }

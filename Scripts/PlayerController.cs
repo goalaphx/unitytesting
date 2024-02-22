@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    private Collider2D coll;
+    private CircleCollider2D coll;
     private enum State {Idle, running, Jumping, Falling, Hurt}
     private State state = State.Idle;
   
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     void Start(){
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        coll = GetComponent<Collider2D>();
+        coll = GetComponent<CircleCollider2D>();
         healthamount.text = Health.ToString();
         scoreamount.text = Score.ToString();
         lifeamount.text = Life.ToString();
